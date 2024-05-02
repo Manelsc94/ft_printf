@@ -27,18 +27,18 @@ LIB_SRCS_OBJS	=	$(SRCS:.c=.o)
 	${CC} ${CFLAGS} -c $< -o $@ -I${INC}
 
 $(NAME):	$(LIB_SRCS_OBJS)
-			make bonus -C Libft
-			cp Libft/libft.a $(NAME)
+//			make bonus -C Libft
+//			cp Libft/libft.a $(NAME)
 			$(LIBC) $(NAME) $(LIB_SRCS_OBJS)
 
 all:	$(NAME)
 
 clean:
-		make clean -C Libft
+//		make clean -C Libft
 		$(RM) -f $(LIB_SRCS_OBJS)
 
 fclean:	clean
-		make clean -C Libft
+//		make clean -C Libft
 		$(RM) $(NAME)
 
 re:	fclean all
