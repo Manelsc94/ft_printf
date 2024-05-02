@@ -19,7 +19,6 @@
 //# include <string.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include "Libft/libft.h"
 
 int		ft_printf(const char *str, ...);
 void	ft_c_conver(char c, int *count);
