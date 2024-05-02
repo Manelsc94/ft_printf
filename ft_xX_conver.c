@@ -14,8 +14,8 @@
 
 void	ft_xX_conver(unsigned int x, char type, int *count)
 {
-	char	str[20];
-	char	*base_format;
+	char	hex_address[20];
+	char	*hex_digits;
 	int		i;
 
 	if (type == 'x')
@@ -27,10 +27,10 @@ void	ft_xX_conver(unsigned int x, char type, int *count)
 		ft_c_conver('0', count);
 	while (x != '\0')
 	{
-		str[i] = base_format[x % 16];
+		hex_address[i] = base_format[x % 16];
 		x = x / 16;
 		i++;
 	}
 	while (i--)
-		ft_c_conver(str[i], count);
+		ft_c_conver(hex_address[i], count);
 }
