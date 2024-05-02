@@ -14,11 +14,11 @@
 
 void	ft_p_conver(size_t ptr, int *count)
 {
-	char	str[20];
-	char	*base_format;
+	char	ptr_adress[20];
+	char	*hex_digits;
 	int		i;
 
-	base_format = "0123456789abcdef";
+	hex_digits = "0123456789abcdef";
 	i = 0;
 	if (ptr == 0)
 	{
@@ -31,11 +31,11 @@ void	ft_p_conver(size_t ptr, int *count)
 		(*count) += 2;
 		while (ptr != 0)
 		{
-			str[i] = base_format[ptr % 16];
+			ptr_adress[i] = hex_digits[ptr % 16];
 			ptr = ptr / 16;
 			i++;
 		}
 		while (i--)
-			ft_c_conver(str[i], count);
+			ft_c_conver(ptr_adress[i], count);
 	}
 }
