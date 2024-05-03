@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_xX_conver(unsigned int x, char type, int *count)
+void	ft_x_conver(unsigned int x, char type, int *count)
 {
 	char	hex_address[20];
 	char	*hex_digits;
