@@ -18,7 +18,7 @@ LIBC	=	ar -rcs
 INC	=	.
 
 SRCS	=	ft_printf.c ft_s_conver.c ft_p_conver.c \
-				ft_u_conver.c ft_xX_conver.c ft_c_conver.c \
+				ft_u_conver.c ft_x_conver.c ft_c_conver.c \
 				ft_d_conver.c
 
 LIB_SRCS_OBJS	=	$(SRCS:.c=.o)
