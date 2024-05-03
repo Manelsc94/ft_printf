@@ -12,24 +12,24 @@
 
 #include "ft_printf.h"
 
-static int	spec_conver(char spec, va_list *args, int *count)
+static int	spec_conver(char spec, va_list *ap, int *count)
 {
 	if (spec == '%')
 		ft_c_conver('%', count);
 	else if (spec == 'c')
-		ft_c_conver(va_arg(*args, int), count);
+		ft_c_conver(va_arg(*ap, int), count);
 	else if (spec == 's')
-		ft_s_conver(va_arg(*args, char *), count);
+		ft_s_conver(va_arg(*ap, char *), count);
 	else if (spec == 'p')
-		ft_p_conver(va_arg(*args, size_t), count);
+		ft_p_conver(va_arg(*ap, size_t), count);
 	else if (spec == 'd' || spec == 'i')
-		ft_d_conver(va_arg(*args, int), count);
+		ft_d_conver(va_arg(*ap, int), count);
 	else if (spec == 'u')
-		ft_u_conver(va_arg(*args, unsigned int), count);
+		ft_u_conver(va_arg(*ap, unsigned int), count);
 	else if (spec == 'x')
-		ft_xX_conver(va_arg(*args, unsigned int), 'x', count);
+		ft_xX_conver(va_arg(*ap, unsigned int), 'x', count);
 	else if (spec == 'X')
-		ft_xX_conver(va_arg(*args, unsigned int), 'X',count);
+		ft_xX_conver(va_arg(*ap, unsigned int), 'X',count);
 	return (0);
 }
 
@@ -37,23 +37,23 @@ int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		count;
-	va_list	args;
+	va_list	ap;
 
 	i = 0;
 	count = 0;
-	va_start(args, str);
+	va_start(ap, str);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')
 		{
 			i++;
-			count += spec_conver(str[i], &args, &count);
+			count += spec_conver(str[i], &ap, &count);
 		}
 		else
 			count += write(1, &str[i], 1);
 		i++;
 	}
-	va_end(args);
+	va_end(ap);
 	return (count);
 }
 
@@ -79,7 +79,9 @@ int	main(void)
 	ft_printf("Percentage sign: %%\n");
 
 	return (0);
-}*/
+}
+
+*/
 /*
 int	main()
 {
