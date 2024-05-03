@@ -27,9 +27,9 @@ static int	spec_conver(char spec, va_list *ap, int *count)
 	else if (spec == 'u')
 		ft_u_conver(va_arg(*ap, unsigned int), count);
 	else if (spec == 'x')
-		ft_xX_conver(va_arg(*ap, unsigned int), 'x', count);
+		ft_x_conver(va_arg(*ap, unsigned int), 'x', count);
 	else if (spec == 'X')
-		ft_xX_conver(va_arg(*ap, unsigned int), 'X',count);
+		ft_x_conver(va_arg(*ap, unsigned int), 'X',count);
 	return (0);
 }
 
