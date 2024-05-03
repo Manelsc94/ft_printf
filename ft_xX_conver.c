@@ -19,15 +19,15 @@ void	ft_xX_conver(unsigned int x, char type, int *count)
 	int		i;
 
 	if (type == 'x')
-		base_format = "0123456789abcdef";
+		hex_digits = "0123456789abcdef";
 	else
-		base_format = "0123456789ABCDEF";
+		hex_digits = "0123456789ABCDEF";
 	i = 0;
 	if (x == 0)
 		ft_c_conver('0', count);
 	while (x != '\0')
 	{
-		hex_address[i] = base_format[x % 16];
+		hex_address[i] = hex_digits[x % 16];
 		x = x / 16;
 		i++;
 	}
