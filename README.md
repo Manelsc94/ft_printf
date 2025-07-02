@@ -30,7 +30,6 @@ ft_printf is a 42 school project that reimplements the C standard library's `pri
 - **Operating System**: UNIX-based (Linux, macOS, etc.).
 - **Compiler**: `gcc`.
 - **Build Tool**: `make`.
-- **Library**: `libft` (included in the repository).
 
 ## 🚀 Installation
 
@@ -46,15 +45,11 @@ ft_printf is a 42 school project that reimplements the C standard library's `pri
    ```
    This creates `libftprintf.a` at the root of the repository.
 
-3. (Optional) Compile with bonus features (if implemented):
-   ```bash
-   make bonus
-   ```
 
 ## 📖 Usage
 
 1. Include the library in your project:
-   - Copy the `ft_printf` directory (including `libft`) into your project folder.
+   - Copy the `ft_printf` directory into your project folder.
    - Include the header in your source files:
      ```c
      #include "ft_printf.h"
@@ -97,7 +92,6 @@ ft_printf/
 | Command       | Description                                    |
 |---------------|------------------------------------------------|
 | `make`        | Builds the mandatory `libftprintf.a`.          |
-| `make bonus`  | Builds `libftprintf.a` with bonus features.     |
 | `make clean`  | Removes object files.                          |
 | `make fclean` | Removes object files and `libftprintf.a`.      |
 | `make re`     | Rebuilds the project from scratch.             |
@@ -113,17 +107,12 @@ ft_printf/
   - Compiled with `-Wall -Wextra -Werror`.
   - Uses `ar` to create the library (no `libtool`).
   - Memory allocation must be freed properly (no leaks).
-- **Libft Integration**: Utilizes `libft` for utility functions, compiled via its own Makefile.
-- **Bonus Features** (optional, if implemented):
-  - Flags: `-`, `0`, `.` (precision), and minimum field width.
-  - Additional flags: `#`, `+`, and space.
 
 ## 📝 Notes
 
 - The bonus part is evaluated only if the mandatory part is flawless.
 - Test programs are recommended for development but not submitted.
 - All files must be at the repository root or in designated folders (`src/`, `libft/`), with no unused files.
-- Once completed, `ft_printf` can be added to your `libft` for use in other 42 projects.
 
 ## 📜 License
 
