@@ -8,7 +8,7 @@
 
 ## 📋 Project Overview
 
-ft_printf is a 42 school project that reimplements the C standard library's `printf()` function. This project focuses on mastering variadic arguments and formatting various data types, enhancing skills in C programming, string manipulation, and modular code design. The resulting `libftprintf.a` library can be integrated into your `libft` for use in future 42 projects. This implementation ensures robust handling of mandatory conversions and adheres to 42's strict coding norms.
+ft_printf is a 42 school project that reimplements the C standard library's `printf()` function. This project focuses on mastering variadic arguments and formatting various data types, enhancing skills in C programming, string manipulation, and modular code design. This implementation ensures robust handling of mandatory conversions and adheres to 42's strict coding norms.
 
 ## ✨ Key Features
 
@@ -28,7 +28,7 @@ ft_printf is a 42 school project that reimplements the C standard library's `pri
 ## 🛠️ Prerequisites
 
 - **Operating System**: UNIX-based (Linux, macOS, etc.).
-- **Compiler**: `gcc`.
+- **Compiler**: `cc`.
 - **Build Tool**: `make`.
 
 ## 🚀 Installation
@@ -57,7 +57,7 @@ ft_printf is a 42 school project that reimplements the C standard library's `pri
 
 2. Link the library during compilation:
    ```bash
-   gcc -Wall -Wextra -Werror your_program.c -L. -lftprintf
+   cc -Wall -Wextra -Werror your_program.c -L. -lftprintf
    ```
 
 ### Example
